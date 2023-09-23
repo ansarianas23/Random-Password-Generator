@@ -42,12 +42,14 @@ function App() {
       // console.log(data.length)
       // console.log(data)
       setCopied(data.length)
+      setTimeout(() => {
+        setCopied(0)
+      }, 3000);
     })
   },[[password]])
 
   useEffect(()=>{
     passwordGenerator()
-    setCopied(0)
   },[length, numberAllowed, charAllowed, setPassword])
 
   return (
